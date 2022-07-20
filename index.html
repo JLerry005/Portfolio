@@ -4,9 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>My Playground</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
 </head>
-<body>
-    
+<body> 
+
+    <section>
+        <!-- cards -->
+        <div class="container">
+            <!-- Card Header -->
+            <div class="card-header">
+                <p> People Entered: </p>
+            </div>
+            <div class="card-body">
+                <h2 id="count-el">0</h2>
+                <div class="button">
+
+                </div>
+            </div>
+            <div class="card-footer">
+
+                <!-- Decreasing the number Button -->
+                <button class="decrement-btn" id="decrement-btn">
+                    <i class="bi bi-dash-lg"></i>
+                </button>
+
+                <!-- Increasing the number Button -->
+                <button class="increment-btn" id="increment-btn" >
+                    <i class="bi bi-plus"></i>
+                </button>
+                
+            </div>
+        </div>
+    </section>
+
+
+    <script src="index.js"></script>
 </body>
 </html>
