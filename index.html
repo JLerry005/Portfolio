@@ -17,24 +17,26 @@
             <div class="card-header">
                 <p> People Entered: </p>
             </div>
+
             <div class="card-body">
                 <h2 id="count-el">0</h2>
-                <div class="button">
-
-                </div>
             </div>
-            <div class="card-footer">
 
+            <div class="card-footer">
                 <!-- Decreasing the number Button -->
-                <button class="decrement-btn" id="decrement-btn">
+                <button class="decrement-btn" id="decrement-btn" onclick="decrement()">
                     <i class="bi bi-dash-lg"></i>
                 </button>
 
                 <!-- Increasing the number Button -->
-                <button class="increment-btn" id="increment-btn" >
+                <button class="increment-btn" id="increment-btn" onclick="increment()">
                     <i class="bi bi-plus"></i>
-                </button>
-                
+                </button>             
+            </div>
+
+             <!-- This is the save Button to log outs the count -->
+            <div class="saveContainer">
+                <button id="save-btn" class="save-btn" onclick="save()">Save </button>
             </div>
         </div>
     </section>
