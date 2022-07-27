@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&family=Press+Start+2P&display=swap');
+
+html{
+    font-family: 'Orbitron', sans-serif;
+}
+body{
+    background-image: url('jordan-icon.jpg');
+    background-color: #1B244A;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+
+    color: #EEEEEE;
+}
+
+/* Container */
+.container{
+    
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+
+    background-color: #1b244a87;
+
+    height: 540px;
+    margin: 200px;
+    padding-top: 50px;
+    margin-left: 200px;
+    margin-right: 200px;
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 36px;
+}
+
+/* Home Scoreboard Design */
+.homeScoreContainer{
+    text-align: center;
+}
+
+.guestScoreContainer{
+    text-align: center;
+}
+
+.bodyHome{
+    margin-top: -30px;
+    background-color: #080001;
+    width: 220px;
+    height: 160px;
+    text-align: center;
+    /* border-color: rgb(37, 37, 37); */
+}
+
+.footerHome{
+    margin-top: 40px;
+    cursor: context-menu;
+}
+
+.scoreButton{
+    background-color: #1B244A;
+    height: 50px;
+    width: 50px;
+    color: #9AABD8;
+    border: 3px solid #9AABD8;
+    border-radius: 8px;
+    border-style: groove;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.homeScore{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 80px;
+    line-height: 160px;
+    text-align: center;
+    color: #F94F6D;
+}
+
+
+

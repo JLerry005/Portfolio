@@ -1,0 +1,29 @@
+
+html{
+
+}
+
+body{
+    /* background-color: blanchedalmond; */
+    background-image: url('dim-background.png');
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+.container{
+    background-image: url('blackJack-Table.jpg');
+    background-position: center;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    color:#ffff;
+    display: flex;
+    justify-content: center;
+}
+
+h1{
+    color: #daa521;
+}
+
+.message-el{
+    text-align: center;
+}

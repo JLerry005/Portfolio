@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basketball Scoreboard</title>
+    <!--CSS LINK FILE -->
+    <link rel="stylesheet" href="scoreboard.css">
+</head>
+<body>
+
+    <!-- This is the container -->
+    <div class="container" id="container">
+        <!-- Home Score -->
+        <div class="homeScoreContainer" id="homeScore">
+            <!-- Header -->
+            <h3>HOME</h3>
+
+            <!-- Body -->
+            <div class="bodyHome" id="bodyHome">
+                <p class="homeScore" id="home-score">0</p>
+            </div>
+
+            <!-- Footer -->
+            <div class="footerHome" id="footerHome">
+                <button class="scoreButton" onclick="plusOneHome()">+1</button>
+                <button class="scoreButton" onclick="plusTwoHome()">+2</button>
+                <button class="scoreButton" onclick="plusThreeHome()">+3</button>
+            </div>
+        </div>
+
+        <!-- Guest Score -->
+        <div class="guestScoreContainer" id="guestScore">
+            <!-- Header -->
+            <h3>GUEST</h3>
+
+            <!-- Body -->
+            <div class="bodyHome" id="bodyguest">
+                <p class="homeScore" id="guest-score">0</p>
+            </div>
+
+            <!-- Footer -->
+            <div class="footerHome" id="footerHome">
+                <button class="scoreButton" onclick="plusOneGuest()">+1</button>
+                <button class="scoreButton" onclick="plusTwoGuest()">+2</button>
+                <button class="scoreButton" onclick="plusThreeGuest()">+3</button>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <button onclick="newGame()">New Game</button>
+    </div>
+
+
+    <script src="scoreboard.js"></script>
+</body>
+</html>
