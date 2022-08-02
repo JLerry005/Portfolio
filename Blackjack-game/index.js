@@ -13,6 +13,8 @@
 
 // console.log(totalSum);
 
+// ====================================================== //
+
 // ========================================== //
 //            if else condition               //
 // ========================================== //
@@ -53,24 +55,211 @@
 //     console.log("Not elegible, you have already gotten one")
 // }'
 
-let firstCard = 10;
-let secondCard = 11;
+// ====================================================== //
+
+// ========================================== //
+//                  START                     //
+// ========================================== //
+
+let firstCard = getRandomNumber();
+let secondCard = getRandomNumber();
+let cards = [firstCard, secondCard]
 let sum = firstCard + secondCard;
 
 let hasBlackJack = false;
 let isAlive = true;
 let message = "";
 
-if(sum <= 20){
-    message = "Do you want to draw a new card? ";
-} else if(sum === 21){
-    message = "Wohoo! You've got Blackjack!";
-    hasBlackJack = true;
-} else {
-    message = "You're out of the game!";
-    isAlive = false;
+let messageEl = document.getElementById("message-el");
+
+let sumEl = document.getElementById("sum-el");
+let cardsEl = document.getElementById("card-el");
+
+function getRandomNumber(){
+    // let randomNumber = 
+    return Math.floor( Math.random() * 13 ) + 1;
 }
 
-console.log(message);
+function startGame(){
+    renderGame();
+}
+
+function renderGame(){
+
+    sumEl.textContent = "Sum: " + sum;
+    cardsEl.textContent = "Cards: ";
+
+    for (let i = 0; i < cards.length; i++){
+        cardsEl.textContent += cards[i] + " ";
+    }
+
+    if(sum <= 20){
+        message = "Do you want to draw a new card?";
+    } else if(sum === 21){
+        message = "You've got Blackjack!";
+        hasBlackJack = true;
+    } else {
+        message = "You're out of the game!";
+        isAlive = false;
+    }
+
+    messageEl.textContent = message;
+}
+
+function newCard(){
+
+    let card = getRandomNumber();
+    sum += card;
+
+    cards.push(card)
+    console.log(cards)
+
+    renderGame();
+}
+
+// ========================================== //
+//                  END                       //
+// ========================================== //
+
+// ====================================================== //
+
+// ========================================== //
+//                  ARRAY                     //
+// ========================================== //
+
+// let myArray = [
+//     "Fresh Graduated",
+//     "Bachelor of Science in Information System",
+//     "HTML, CSS, JS, and some other frameworks of CSS"
+// ]
+
+// console.log( myArray[1]);
+// console.log( myArray[2]);
+// console.log( myArray[0]);
+
+// let describeMySelf = [
+//     "John Lerry",
+//     22,
+//     true
+// ]
+
+// console.log(describeMySelf)
+
+// let message = [
+//     "Hey, how's it going?",
+//     "I'm great, thank you! How about you?",
+//     "All good. Been working on my portfolio lately."
+// ]
+
+// let newMessage = "Same here!"
+
+// message.push(newMessage);
+// message.pop();
+
+// console.log(message);
+
+// ========================================== //
+//                  END                       //
+// ========================================== //
+
+// ========================================== //
+//                  FOR LOOP                  //
+// ========================================== //
+
+// for (let count = 10; count < 21; count += 1){
+//     console.log(count)
+// }
+
+// for (let i = 10; i < 101; i += 10){
+//     console.log(i);
+// }
+
+// let messages = [
+//     "Hey, how's it going?",
+//     "I'm great, thank you! How about you?",
+//     "All good. Been working on my portfolio today",
+//     "Same here!",
+//     "Great to hear",
+//     "Yeah",
+//     "Yeah",
+//     "All good. Been working on my portfolio today"
+// ]
+
+// for (i = 0; i < messages.length; i += 1){
+//     console.log(messages [i]);
+// }
+
+// let cards = [7, 3, 9, 10];
+
+// for (let i = 0; i < cards.length; i++){
+//     console.log(cards[i]);
+// }
+
+// let sentence = ["Hello", "my", "name", "is","Per"]
+// let greetingEl = document.getElementById("greeting-el")
+
+// for (let i = 0; i < sentence.length; i++){
+//     console.log(sentence[i])
+
+//     greetingEl.textContent += (sentence[i]) + " ";
+// }
+
+// ========================================== //
+//                  END                       //
+// ========================================== //
+
+// ========================================== //
+//       RETURNING VALUES IN FUNCTIONS        //
+// ========================================== //
+
+// let player1Time = 102;
+// let player2Time = 101;
+
+// function getFastestRaceTime(){
+//     if (player1Time < player2Time){
+//         return player1Time;
+//     } else if(player2Time < player1Time){
+//         return player2Time
+//     } else{
+//         return player1Time
+//     }
+// }
+
+// // let fastestRace = getFastestRaceTime();
+// // console.log(fastestRace)
+
+// function totalRaceTime(){
+//     return player1Time + player2Time;
+// }
+
+// let totalTime = totalRaceTime();
+// console.log(totalTime)
+
+// ========================================== //
+//                  END                       //
+// ========================================== //
+
+// ========================================== //
+//         GENERATING RANDOM NUMBERS          //
+// ========================================== //
+
+// MATH.RANDOM METHOD
+// let randomNumber = Math.random() * 6;
+// console.log(randomNumber)
+
+// MATH.FLOOR METHOD
+// let flooredNumber = Math.floor(2.5353)
+// console.log(flooredNumber)
+
+// function rollDice(){
+//     let randomNumber = Math.floor( Math.random() * 6 ) + 1;
+//     return randomNumber;
+// }
+
+// console.log( rollDice() );
 
 
+// What you declared number this is the exact number that will be output
+// ========================================== //
+//                  END                       //
+// ========================================== //

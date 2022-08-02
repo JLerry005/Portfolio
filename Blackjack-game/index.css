@@ -12,12 +12,20 @@ body{
 
 .container{
     background-image: url('blackJack-Table.jpg');
+    background-size: contain;
     background-position: center;
     background-attachment: scroll;
     background-repeat: no-repeat;
+    /* background-size: contain; */
     color:#ffff;
     display: flex;
     justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 200px;
+    height: 500px;
+    /* box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; */
 }
 
 h1{
@@ -25,5 +33,28 @@ h1{
 }
 
 .message-el{
-    text-align: center;
+    font-style: italic;
+}
+
+.button-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+button{
+    color: #016f32;
+    font-weight: bolder;
+    background-color: goldenrod;
+
+    margin-top: 7px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    width: 150px;
+
+    border-radius: 7px;
+    border: none;
+
 }
