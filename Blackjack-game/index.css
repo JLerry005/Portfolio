@@ -1,35 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Nova+Flat&display=swap');
+
+@keyframes myAnim {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
 
 html{
-
+    animation: myAnim 1s ease-in 0s 1 normal none;
 }
 
 body{
     /* background-color: blanchedalmond; */
     background-image: url('dim-background.png');
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-
+    font-family: 'Nova Flat', cursive;   
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+
+
 .container{
-    background-image: url('blackJack-Table.jpg');
+    /* background-image: url('blackJack-Table.jpg');
     background-size: contain;
     background-position: center;
     background-attachment: scroll;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; */
     /* background-size: contain; */
+    background-color: #0d5b0d;
     color:#ffff;
+
     display: flex;
     justify-content: center;
     align-items: center;
+
     text-align: center;
     font-weight: bold;
+
     margin-top: 200px;
+
     height: 500px;
+    width: 500px;
+
+    border-radius: 20px;
     /* box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; */
 }
 
-h1{
+h1{   
     color: #daa521;
+    margin-bottom: 50px;
 }
 
 .message-el{
@@ -44,11 +69,11 @@ h1{
 }
 
 button{
-    color: #016f32;
+    color: #0d5b0d;
     font-weight: bolder;
     background-color: goldenrod;
 
-    margin-top: 7px;
+    margin-top: 10px;
     padding-top: 10px;
     padding-bottom: 10px;
 
@@ -56,5 +81,10 @@ button{
 
     border-radius: 7px;
     border: none;
+}
 
+button:active{
+    background-color: goldenrod;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    box-shadow: rgba(240, 46, 170, 0.4) 0px 4px, rgba(240, 46, 170, 0.3) 0px 6px, rgba(240, 46, 170, 0.2) 0px 8px, rgba(240, 46, 170, 0.1) 0px 12px, rgba(240, 46, 170, 0.05) 0px 15px;
 }

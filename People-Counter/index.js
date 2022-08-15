@@ -61,8 +61,6 @@ function save(){
     countEl.textContent = count;
 }
 
-
-
 // Decrement the people Entered
 function decrement() {
     count = count - 1; 

@@ -61,13 +61,17 @@
 //                  START                     //
 // ========================================== //
 
-let firstCard = getRandomNumber();
-let secondCard = getRandomNumber();
-let cards = [firstCard, secondCard]
-let sum = firstCard + secondCard;
+// let firstCard = getRandomNumber();
+// let secondCard = getRandomNumber();
+let player = {
+    name: "Ler",
+    chips: 1500
+}
 
+let cards = []
+let sum = 0;
 let hasBlackJack = false;
-let isAlive = true;
+let isAlive = false;
 let message = "";
 
 let messageEl = document.getElementById("message-el");
@@ -75,12 +79,31 @@ let messageEl = document.getElementById("message-el");
 let sumEl = document.getElementById("sum-el");
 let cardsEl = document.getElementById("card-el");
 
+let playerEl = document.getElementById("player-el");
+playerEl.textContent = player.name + ": $" + player.chips;
+
 function getRandomNumber(){
-    // let randomNumber = 
-    return Math.floor( Math.random() * 13 ) + 1;
+
+     let randomNumber = Math.floor( Math.random() * 13 ) + 1;
+                                                                                                                                
+     if(randomNumber > 10){
+        return 10;
+     } else if(randomNumber === 1){
+        return 11;
+     } else{
+        return randomNumber;
+     }
 }
 
 function startGame(){
+    isAlive = true;
+
+    let firstCard = getRandomNumber();
+    let secondCard = getRandomNumber();
+
+    cards = [firstCard, secondCard];
+    sum = firstCard + secondCard;
+
     renderGame();
 }
 
@@ -108,13 +131,23 @@ function renderGame(){
 
 function newCard(){
 
-    let card = getRandomNumber();
-    sum += card;
+    if(isAlive === true && hasBlackJack === false){
+        let card = getRandomNumber();
+        sum += card;
+    
+        cards.push(card)
+        console.log(cards)
+    
+        renderGame();
+    }
 
-    cards.push(card)
-    console.log(cards)
+}
 
-    renderGame();
+function newGame(){
+    
+    cardsEl.textContent = "Cards: ";
+    sumEl.textContent = "Sum: "
+    messageEl.textContent = "Want to Play a round?"
 }
 
 // ========================================== //
@@ -260,6 +293,63 @@ function newCard(){
 
 
 // What you declared number this is the exact number that will be output
+// ========================================== //
+//                  END                       //
+// ========================================== //
+
+// ========================================== //
+//             LOGICAL OPERATORS              //
+// ========================================== //
+
+// let hasCompletedCourse = false;
+// let givesCertificate = true;
+
+// if(hasCompletedCourse === true && givesCertificate === true){
+//     console.log("Generating Certificate.....")
+// }
+
+// let hasSolvedChallenge = false;
+// let hasHintsLeft = false;
+
+// if(hasSolvedChallenge === false && hasHintsLeft === false){
+//     showSolution();
+// }
+
+// function showSolution(){
+//     console.log("Showing the solution...")
+// }
+
+
+// let likeDocumentaries = true;
+// let likesStartups = false;
+
+// if(likeDocumentaries === true || likesStartups === true){
+//     recommendMovies();
+// }
+
+// function recommendMovies(){
+//     console.log("Hey, check out this new firm we think you will like!")
+// }
+
+// ========================================== //
+//                  END                       //
+// ========================================== //
+
+// ========================================== //
+//                OBJECTS                     //
+// ========================================== //
+
+// let castleRent = {
+//     title: "Live like a King in my Castle",
+//     capacity: ["4 guest", "1 bedroom", "2 beds"],
+//     price: 190,
+//     available: true
+// }
+
+// console.log( castleRent.title )
+// console.log( castleRent.available )
+
+
 // ========================================== //
 //                  END                       //
 // ========================================== //

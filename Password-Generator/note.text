@@ -1,0 +1,7 @@
+TO DO for this project:
+
+1. Add a new button called "Generate Again"? After generating password
+2. Disable Generate button if already generating a password
+3. Ability to set password lenght
+4. Add "copy-on-click"
+5. Toggle "symbols" and "numbers" on/off

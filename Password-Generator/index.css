@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&family=Press+Start+2P&display=swap');
+
+@keyframes myAnim {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+html{
+    animation: myAnim 1s ease-in 0s 1 normal none;
+}
+
+body{
+    background-color: #1f2937;
+    font-family: 'Orbitron', sans-serif;
+    color: #f9ffff;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+}
+
+.container{
+    color: #f9ffff; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-body{
+    margin-left: 80px
+}
+
+.firstText{
+    font-size: 4.7em;
+    font-weight: bolder;
+}
+
+.secondText{
+    font-size: 20px;
+    margin-top: -70px;
+    margin-bottom: 70px;
+    color: #d5d4d8;
+}
+
+.generatePasswordBtn{
+    height: 40px;
+    width: 200px;
+    margin-bottom: 20px;
+    background-color: #10b981;
+    color: #f9ffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+}
+
+.generatePassword{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    margin-top: 30px;
+}
+
+#textFieldOne-el{
+    padding: 7px;
+    border: none;
+    background-color: #273549;
+    width: 250px;
+    color: #4fe088;
+    font-size: 20px;
+    text-align: center;
+}
+
+#textFieldTwo-el{
+    padding: 7px;
+    border: none;
+    background-color: #273549;
+    width: 250px;
+    color: #4fe088;
+    font-size: 20px;   
+    text-align: center;
+}
+
+.img-container{
+    margin-left: 100px;
+}
+
+img{
+    height: 800px;
+    width: 800px;
+}
+
+.passwords{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 320px;
+}
+
+.clipBoard{
+    border: none;
+    height: 50px;
+    width: 50px;
+    background-color: #1f2937;
+    color: #4fe088;
+}
+
