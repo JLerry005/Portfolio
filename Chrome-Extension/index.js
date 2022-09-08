@@ -8,7 +8,6 @@ const ulEl = document.getElementById("ul-el")
 
 inputBtn.addEventListener("click", function() {
     myLead.push(inputEl.value);
-    console.log(myLead)
     inputEl.value = ""
     renderLeads()
 })
@@ -18,14 +17,20 @@ function renderLeads(){
     let listItems = "";
 
     for(let i = 0; i < myLead.length; i++){
-        listItems += "<li>" + myLead[i] + "</li>"
-    
+
+        listItems += `
+            <li>
+                <a href='${myLead[i]}' target='_blank'>
+                    ${myLead[i]}
+                </a>
+            </li>
+        `;
+
         // const li = document.createElement("li")
         // li.textContent += myLead[i]
         // ulEl.append(li)
-    
-        console.log(listItems)
     }
+    
     ulEl.innerHTML = listItems;
 }
 
@@ -40,3 +45,23 @@ function renderLeads(){
 // function buy(){
 //     container.innerHTML += "<p> Thank you for buying! </p>"
 // }
+
+
+// const recipient = "James";
+
+// const sender = "John Lerry"
+
+// const email = `Hey ${recipient}! 
+
+// How is it going? Cheers ${sender}
+// `;
+
+// console.log(email)
+
+        // listItems += `
+        //     <li>
+        //         <a href='${myLead[i]}' target='_blank'>
+        //             ${myLead[i]}
+        //         </a>
+        //     </li>
+        // `

@@ -10,9 +10,12 @@
     <link type="image/png" sizes="96x96" rel="icon" href="icons8-basketball-96.png">
 </head>
 <body>
+    <!-- <marquee direction="left" height="100px">LA Lakers Basketball</marquee> -->
+
 
     <!-- This is the container -->
     <div class="container" id="container">
+
         <!-- Home Score -->
         <div class="homeScoreContainer" id="homeScore">
             <!-- Header -->
@@ -29,6 +32,18 @@
                 <button class="scoreButton" onclick="plusTwoHome()">+2</button>
                 <button class="scoreButton" onclick="plusThreeHome()">+3</button>
             </div>
+        </div>
+
+        <div class="centerContainer">
+            <div class="time-el">
+                <div>
+                    <p>Time</p>
+                    <h2>12:00</h2>
+                </div>
+
+                <h1>24</h1>
+            </div>
+            <button class="newGame-btn" onclick="newGame()">New Game</button>
         </div>
 
         <!-- Guest Score -->
@@ -49,11 +64,6 @@
             </div>
         </div>
     </div>
-
-    <div>
-        <button onclick="newGame()">New Game</button>
-    </div>
-
 
     <script src="scoreboard.js"></script>
 </body>
